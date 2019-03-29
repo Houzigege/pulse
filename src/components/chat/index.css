@@ -1,0 +1,320 @@
+
+.title{
+  text-align: center;
+  padding: 20px 20px 10px;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 666;
+}
+
+.title h1{
+  line-height: 50px;
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+}
+
+.titleIcon{
+  float: left;
+  font-size: 28px;
+  position: absolute;
+  left: 10px;
+  top: 32px;
+  cursor: pointer;
+}
+
+.messagePanel{
+  overflow: auto;
+}
+
+.leftBox{
+  position: fixed;
+  left: 0;
+  top: 70px;
+  z-index: 888;
+  width: 100%;
+}
+
+.layer{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.3;
+  z-index: 998;
+}
+
+.leftBox ul{
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #EDEEEF;
+  /*height: inherit;*/
+  z-index: 999;
+  transition: .6s;
+  overflow: hidden;
+}
+
+.leftBox ul li{
+  margin: 0;
+  padding: 0;
+}
+
+.leftBox ul li a{
+  display: block;
+  list-style: none;
+  font-size: 16px;
+  line-height: 56px;
+  color: #323242;
+  font-family:Arial-BoldMT;
+  min-width: 190px;
+  padding: 0 20px;
+  background: #EDEEEF;
+  border-bottom: 2px solid #F5F6F6;
+  border-right: 2px solid #D5D6D6;
+}
+
+.leftBox ul li a:hover{
+  color: #6742D9;
+  border-right: 2px solid #6742D9;
+}
+
+.inputPanel{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 9;
+}
+
+.botLine, .userLine{
+  width: 100%;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+.botSaid{
+  position: relative;
+  float: left;
+  padding: 12px;
+  margin: 10px auto 10px 10px;
+  max-width: 70%;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  background-color: #fff;
+  animation: myfirst 0.3s;
+  -moz-animation: myfirst 0.3s;
+  -webkit-animation: myfirst 0.3s;
+  -o-animation: myfirst 0.3s;
+}
+
+.botSaid:after{
+  content: '';
+  display: inline-block;
+  border: 7px solid #fff;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: 16px;
+  left: -14px;
+}
+
+.userSaid{
+  position: relative;
+  float: right;
+  padding: 12px;
+  margin: 10px 10px 10px auto;
+  max-width: 70%;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  word-wrap: break-word;
+  background-color: #fff;
+  animation: myfirst 0.3s;
+  -moz-animation: myfirst 0.3s;
+  -webkit-animation: myfirst 0.3s;
+}
+
+.userSaid:after{
+  content: '';
+  display: inline-block;
+  border: 7px solid #fff;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: 16px;
+  right: -14px;
+}
+
+.avatarLeft{
+  float: left;
+  margin: 6px 0 0 10px;
+  width: 48px;
+  height: 48px;
+}
+
+.avatarRight{
+  float: right;
+  margin: 6px 10px 0 0;
+  width: 48px;
+  height: 48px;
+}
+
+.contentBox{
+
+}
+
+.avatarBox{
+  padding: 16px 10%;
+  background-color: #ebebeb;
+}
+
+.avatarContent{
+  padding: 0 10px;
+  text-align: center;
+  vertical-align: top;
+  color: #6742d9;
+  display: inline-block;
+  line-height: 20px;
+}
+
+.avatarContent i{
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.inputBox{
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  background: -webkit-gradient(linear,left top,right top,from(#6842d8),to(#f35279));
+  background: -webkit-linear-gradient(left,#6842d8,#f35279);
+  background: -o-linear-gradient(left,#6842d8,#f35279);
+  background: linear-gradient(90deg,#6842d8,#f35279);
+  background-color: #6842d8;
+}
+
+.inputContainer{
+  width: 80%;
+  display: inline-block;
+  margin: 0 10%;
+}
+
+.rightContainer{
+  width: 10%;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  text-align: left;
+}
+
+.rightContainer button, .leftContainer button, .rightContainer button:hover, .leftContainer button:hover, .rightContainer button:active, .leftContainer button:active{
+  background: transparent !important;
+}
+
+.leftContainer{
+  width: 10%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  text-align: right;
+}
+
+.inputBox .buttonContainer{
+  border: none;
+  padding: 0;
+  height: 40px;
+}
+
+.inputBox .buttonContainer img{
+  width: 38px;
+}
+
+.botSaidTop{
+
+}
+
+.botSaidSummary{
+  padding: 0;
+  line-height: 18px;
+}
+
+.botSaidSummary a{
+  line-height: 20px;
+  color: #6742d9;
+  display: block;
+  margin: 6px 0;
+  cursor:default
+}
+
+.botSaidSummary span{
+  display: inline-block;
+  width: 20px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.botSaidSummary span:last-child{
+  width: 90%;
+  text-align: left;
+}
+
+.FabulousBox{
+  border-top: 1px solid #d9d9d9;
+  padding: 10px 20px 0;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.FabulousBox i{
+  font-size: 22px;
+}
+
+.FabulousLike{
+  display: inline-block;
+  width: 50%;
+  border-right: 1px solid #d9d9d9;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 10px 0 9px;;
+}
+
+.FabulousDislike{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 10px
+}
+
+.timeBox{
+  text-align: center;
+  line-height: 46px;
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+.optionBox{
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+
+.optionButton{
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.checkboxGroup{
+  text-align: left;
+}
+
+.checkboxGroup label{
+  margin: 8px 8px 8px 0;
+}
