@@ -5,7 +5,9 @@ export default {
   plugins: [
     ['umi-plugin-react', {
       antd: true,
-      dva: true,
+      dva: {
+        immer: true
+      },
       dynamicImport: false,
       title: 'Ageing',
       dll: false,

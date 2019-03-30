@@ -3,3 +3,34 @@
 
 }
 
+.normal .header{
+  height: 64px;
+  padding: 0;
+  line-height: 64px;
+}
+
+.logo {
+  width: 200px;
+  height: 64px;
+  background: #fff;
+  float: left;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.logo img{
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.right{
+  float: right;
+  margin: 10px 38px 0 0;
+}
+
+.right a{
+  display: block;
+  line-height: 52px;
+}
