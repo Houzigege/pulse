@@ -3,7 +3,6 @@ import * as authService from '../services/api'
 export default {
   namespace: 'app',
   state: {
-    login: false,
     loading: false,
     fetching: false,
   },

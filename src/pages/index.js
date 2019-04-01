@@ -1,12 +1,34 @@
 import React, { Component } from "react";
-import AgeingPage from "./ageing/AgeingPage";
+import { connect } from 'react-redux'
+import router from 'umi/router';
+import { Spin } from 'antd';
 
-export default class App extends Component {
+@connect(({ user }) => ({ ...user }))
+class App extends Component {
+
+  componentDidMount() {
+    const origin = window.location.origin;
+    const { authority } = this.props;
+    if(authority === 'localAdmin') {
+      window.location.href = `${origin}/content/pages`
+    } else if(authority === 'user') {
+      window.location.href = `${origin}/content/banners`
+    } else {
+      window.location.href = `${origin}/settings/management`
+    }
+  }
+
   render() {
     return (
-      <div>
-        <AgeingPage />
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '380px'
+      }}>
+        <Spin />
       </div>
     )
   }
 }
+export default App;

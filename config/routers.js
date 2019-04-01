@@ -1,12 +1,23 @@
-
 const routes = [
   {
     path: "/user",
     component: '../layouts/user.js',
     routes: [
       {
-        path: "/user",
-        component: './index.js',
+        path: "/user/login",
+        component: './Pages/PagesWrap.js',
+      },
+      {
+        path: "/user/my-profile",
+        component: './MyProfile/MyProfileWrap.js',
+      },
+      {
+        path: "/user/change-password",
+        component: './ChangePassword/ChangePasswordWrap.js',
+      },
+      {
+        path: "/user/forget-password",
+        component: './ForgetPassword/ForgetPasswordWrap.js',
       }
     ],
   },
@@ -14,39 +25,47 @@ const routes = [
     path: "/",
     component: '../layouts/index.js',
     routes: [
-      { path: '/', redirect: '/home/index' },
+      { path: '/', redirect: '/home' },
       {
         path: "/home",
-        icon: 'home',
-        name: '首页',
+        component: './index.js',
+      },
+      {
+        path: "/content",
+        icon: 'team',
+        name: 'Function & Content Management',
         routes: [
           {
-            path: '/home/a',
-            name: '大脑壳',
-            component: './index.js',
+            path: '/content/pages',
+            name: 'Pages',
+            authority: ['localAdmin'],
+            component: './Pages/PagesWrap.js',
           },
           {
-            path: "/home/b",
-            name: '小脑壳',
-            component: './ageing/AgeingPage.js',
+            path: "/content/functions",
+            name: 'Functions',
+            component: './Functions/FunctionsWrap.js',
+            authority: ['localAdmin'],
+          },
+          {
+            path: "/content/banners",
+            name: 'Banners',
+            component: './Banners/BannersWrap.js',
+            authority: ['user'],
           }
         ],
       },
       {
-        path: "/phone",
-        icon: 'phone',
-        name: '电话',
+        path: "/settings",
+        icon: 'setting',
+        name: 'Settings',
+        authority: ['superAdmin', 'localAdmin'],
         routes: [
           {
-            path: '/phone/a',
-            name: '我的电话',
-            component: './index.js',
+            path: '/settings/management',
+            name: 'Admin Management',
+            component: './AdminManagement/AdminManagementWrap.js',
           },
-          {
-            path: "/phone/b",
-            name: '我的手机',
-            component: './ageing/AgeingPage.js',
-          }
         ],
       },
     ]

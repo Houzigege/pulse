@@ -7,16 +7,19 @@
   height: 64px;
   padding: 0;
   line-height: 64px;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .logo {
   width: 200px;
-  height: 64px;
+  height: 63px;
   background: #fff;
   float: left;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  border-right: 1px solid #e8e8e8;
 }
 
 .logo img{

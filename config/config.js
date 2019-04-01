@@ -9,7 +9,7 @@ export default {
         immer: true
       },
       dynamicImport: false,
-      title: 'Ageing',
+      title: 'Pulse',
       dll: false,
       hardSource: false,
       routes: {
@@ -24,10 +24,6 @@ export default {
     ie: 10,
   },
   proxy: {
-    "api/lifestyle": {
-      "target": "https://instagramdevapi.azurewebsites.net/lifestyle?userhandle=realdonaldtrump' ",
-      "changeOrigin": true,
-      "pathRewrite": { "^api/lifestyle": "/lifestyle" }
-    }
+
   }
 }
